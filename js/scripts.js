@@ -1,26 +1,34 @@
 /* Word Puzzle */
 
-// Business Logic:
-function makePuzzle(sentence){
-  puzzle = sentence.replace(/([aeiou])/g, function (match) {
-      return match.replace(match, "-");
-  });
-}
+// BUSINESS LOGIC FOR REGULAR EXPRESSION VERSION:
+// function makePuzzle(sentence){
+//   puzzle = sentence.replace(/([aeiou])/g, function (match) {
+//       return match.replace(match, "-");
+//   });
+// }
 
 // User Interface Logic:
 $(function(){
 
-var sentence = "Ethical letterpress polaroid vinyl. Biodiesel twee iPhone shabby chic, wayfarers echo park dreamcatcher aesthetic. IPhone microdosing craft beer pug, shabby chic umami bushwick irony sriracha authentic chambray. Selvage health goth offal, blue bottle squid lo-fi knausgaard echo park literally bicycle rights brooklyn jean shorts actually.";
+var sentence = "Believe you can and you're halfway there. Theodore Roosevelt";
 var vowels = ["a", "e", "i", "o", "u"];
+var letters = sentence.split("");
 
 console.log(sentence);
 console.log(vowels);
+console.log(letters);
 
-/* Below is the regular expression of what needs to happen:
-var fixed = sentence.replace(/e/g, "-").replace(/a/g, "-").replace(/i/g, "-").replace(/o/g, "-").replace(/u/g, "-");
-*/
+// NON-REGULAR-EXPRESSION CODE FOR REPLACEMENT (need to make DRY)
+letters.forEach(function(letter) {
+  if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u" ){
+    $("#puzzle").append("-");
+  } else if (letter !== "a" || letter !== "e" || letter !== "i" || letter !== "o" || letter !== "u" ){
+    $("#puzzle").append(letter);
+  }
+});
 
-makePuzzle(sentence);
-$("#puzzle").text(puzzle);
+// FOR REGULAR EXPRESSION VERSION - SHOWS PUZZLE ON PAGE
+// makePuzzle(sentence);
+// $("#puzzle").text(puzzle);
 
 });
