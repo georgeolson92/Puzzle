@@ -3,7 +3,7 @@
 
 $(function(){
 
-var sentence = "Believe you can and you're halfway there. Theodore Roosevelt";
+var sentence = "Ethical letterpress polaroid vinyl. Biodiesel twee iPhone shabby chic, wayfarers echo park dreamcatcher aesthetic. IPhone microdosing craft beer pug, shabby chic umami bushwick irony sriracha authentic chambray. Selvage health goth offal, blue bottle squid lo-fi knausgaard echo park literally bicycle rights brooklyn jean shorts actually.";
 var vowels = ["a", "e", "i", "o", "u"];
 
 console.log(sentence);
