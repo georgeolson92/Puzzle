@@ -11,11 +11,9 @@
 $(function(){
 
 var sentence = "Believe you can and you're halfway there. Theodore Roosevelt";
-var vowels = ["a", "e", "i", "o", "u"];
 var letters = sentence.split("");
 
 console.log(sentence);
-console.log(vowels);
 console.log(letters);
 
 // NON-REGULAR-EXPRESSION CODE FOR REPLACEMENT (need to make DRY)
